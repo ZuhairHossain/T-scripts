@@ -1,0 +1,9 @@
+Mon Sep 29 02:55:47 PM +06 2025: Deleted log files older than 7 days from demo_logs
+Mon Sep 29 02:56:13 PM +06 2025: Deleted log files older than 7 days from ../demo_logs
+Mon Sep 29 03:00:15 PM +06 2025: Deleted log files older than 7 days from ../demo_logs
+Mon Sep 29 03:08:04 PM +06 2025: No log files older than 7 days found in ../demo_logs.
+Mon Sep 29 03:09:29 PM +06 2025: Deleting the following log files older than 7 days from ../demo_logs:
+../demo_logs/test5.log
+../demo_logs/test3.log
+../demo_logs/test4.log
+Mon Sep 29 03:09:29 PM +06 2025: Deletion completed.
