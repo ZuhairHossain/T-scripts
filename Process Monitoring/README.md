@@ -10,7 +10,6 @@ It is designed to be used in production with **cron**.
 
 ```bash
 sudo dnf install nginx -y
-sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
 
