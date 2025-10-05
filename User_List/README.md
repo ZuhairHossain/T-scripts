@@ -67,7 +67,7 @@ chmod +x list_users_shells.sh
 
 ### Example Output
 
-```
+```bash
 ============================================
 Users with /bin/bash shell
 --------------------------------------------
