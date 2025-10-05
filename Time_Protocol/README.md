@@ -8,7 +8,7 @@ This document explains the usage and functionality of the `check_time_sync.sh` s
 
 `check_time_sync.sh` is a Bash script that monitors the system time and verifies whether it is in sync with network time servers. It uses both **timedatectl** and **chronyc** (Chrony) for checking synchronization.
 
-### Features:
+### Features
 
 * Checks system clock synchronization status via `timedatectl`.
 * Checks NTP server tracking and offsets via `chronyc` (if Chrony is installed).
@@ -19,21 +19,21 @@ This document explains the usage and functionality of the `check_time_sync.sh` s
 
 ## 2. Script Usage
 
-### Make the script executable:
+### Make the script executable
 
 ```bash
 chmod +x check_time_sync.sh
 ```
 
-### Run the script:
+### Run the script
 
 ```bash
 ./check_time_sync.sh
 ```
 
-### Sample Output:
+### Sample Output
 
-```
+```bash
 ===== System Time Synchronization Check =====
 Checking via timedatectl...
 System clock synchronized: no
@@ -72,7 +72,7 @@ sudo chronyc -a makestep
 
 2. Update `/etc/chrony/chrony.conf` to allow localhost:
 
-```
+```bash
 allow 127.0.0.1
 allow ::1
 ```
