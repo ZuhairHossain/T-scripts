@@ -9,6 +9,7 @@ This document explains how the `rotate_logs.sh` script works, how to set up a de
 `rotate_logs.sh` is a production-ready Bash script that rotates log files, keeping the last 5 versions and automatically deleting older ones. It is safe, simple, and works with any log file specified by the user.
 
 Key features:
+
 - Keeps the last **5 log backups** (.1 to .5).
 - Deletes any older backups (.6, .7, etc.).
 - Creates an empty current log file after rotation.
@@ -66,7 +67,8 @@ echo "✅ Rotation complete for $LOGFILE"
 ls -l "$LOGDIR"
 ```
 
-### How it works:
+### How it works
+
 1. **Delete old backups beyond `.5`**: ensures only the last 5 backups remain.
 2. **Shift backups**: `.4 → .5`, `.3 → .4`, etc.
 3. **Rotate current log**: moves the current log to `.1`.
@@ -105,6 +107,7 @@ ls -lt "$LOG_DIR"
 ```
 
 Run the setup script:
+
 ```bash
 chmod +x setup_demo_logs.sh
 ./setup_demo_logs.sh
@@ -115,16 +118,19 @@ chmod +x setup_demo_logs.sh
 ## 4. Using the Rotation Script
 
 1. Make the rotation script executable:
+
 ```bash
 chmod +x rotate_logs.sh
 ```
 
 2. Rotate your log file:
+
 ```bash
 ./rotate_logs.sh ./log_files/demo.log
 ```
 
 3. Check results:
+
 - `demo.log` → new empty file
 - `demo.log.1` → previous current log
 - `demo.log.2`–`demo.log.5` → older backups
@@ -135,6 +141,7 @@ chmod +x rotate_logs.sh
 ## 5. Automating Rotation
 
 Add the script to `cron` for daily rotation, e.g.: 
+
 ```bash
 0 0 * * * /path/to/rotate_logs.sh /path/to/logfile.log
 ```
@@ -149,4 +156,4 @@ Add the script to `cron` for daily rotation, e.g.:
 
 ---
 
-This setup allows safe and automated log rotation in Linux environments.
+This setup allows safe and automated log rotation in Linux environments

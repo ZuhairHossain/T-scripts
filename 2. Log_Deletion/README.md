@@ -3,12 +3,14 @@
 This Bash script finds and deletes log files older than a specified number of days. It also logs the deleted files and prints messages if no old logs are found.
 
 ## Features
+
 - Deletes `.log` files older than a specified number of days.
 - Handles filenames with spaces or special characters.
 - Logs deleted files and actions.
 - Prints messages if no old log files are found.
 
 ## Script
+
 ```bash
 #!/bin/bash
 
@@ -40,54 +42,66 @@ fi
 
 ## Test Process (Demo)
 
-1. **Create a demo folder for logs:**
+**Create a demo folder for logs:**
+
 ```bash
 mkdir -p ~/demo_logs
 ```
 
-2. **Create demo log files:**
+**Create demo log files:**
+
 ```bash
 touch ~/demo_logs/test1.log
 touch ~/demo_logs/test2.log
 touch ~/demo_logs/test3.log
 ```
 
-3. **Set some files to be older than 7 days:**
+**Set some files to be older than 7 days:**
+
 ```bash
 touch -d "10 days ago" ~/demo_logs/test2.log
 touch -d "15 days ago" ~/demo_logs/test3.log
 ```
 
-4. **Update script to point to demo folder:**
+**Update script to point to demo folder:**
+
 ```bash
 LOG_DIR="$HOME/demo_logs"
 ```
 
-5. **Run the script:**
+**Run the script:**
+
 ```bash
 bash delete_old_logs.sh
 ```
 
-6. **Check the log of deleted files:**
+**Check the log of deleted files:**
+
 ```bash
 cat ~/demo_logs/cleanup_logs.log
 ```
 
-7. **Clean up demo folder after testing:**
+**Clean up demo folder after testing:**
+
 ```bash
 rm -rf ~/demo_logs
 ```
 
 ## Cronjob (Optional)
+
 To run the script automatically every night at 2 AM, add a cronjob:
+
 ```bash
 0 2 * * * /path/to/delete_old_logs.sh
 ```
 
 ## Notes
+
 - Ensure the script has execute permissions:
+
 ```bash
 chmod +x delete_old_logs.sh
 ```
+
 - For real `/var/log` cleanup, run the script with `sudo` to avoid permission issues.
-- Always test with demo logs before running on production logs.
+- Always test with demo logs before running on production logs

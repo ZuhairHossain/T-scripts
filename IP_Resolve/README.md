@@ -8,7 +8,7 @@ This document explains the usage and functionality of the `resolve_ips.sh` Bash 
 
 `resolve_ips.sh` is a Bash script that accepts a list of IP addresses and resolves their hostnames using the `host` command. It handles errors gracefully and works with both command-line IP arguments and files containing IPs.
 
-### Features:
+### Features
 
 * Accepts IP addresses as command-line arguments or from a file.
 * Resolves IPs to hostnames (PTR records).
@@ -19,18 +19,18 @@ This document explains the usage and functionality of the `resolve_ips.sh` Bash 
 
 ## 2. Script Usage
 
-### Running with command-line IPs:
+### Running with command-line IPs
 
 ```bash
 chmod +x resolve_ips.sh
 ./resolve_ips.sh 8.8.8.8 1.1.1.1 142.250.72.206
 ```
 
-### Running with a file of IPs:
+### Running with a file of IPs
 
 Create a text file (e.g., `ips.txt`) containing one IP per line:
 
-```
+```bash
 8.8.8.8
 1.1.1.1
 142.250.72.206
@@ -42,9 +42,9 @@ Run the script with:
 ./resolve_ips.sh -f ips.txt
 ```
 
-### Sample Output:
+### Sample Output
 
-```
+```bash
 8.8.8.8 -> dns.google
 1.1.1.1 -> one.one.one.one
 142.250.72.206 -> lga34s10-in-f14.1e100.net
@@ -96,7 +96,7 @@ resolve_ip() {
 
 ## 5. Example
 
-```
+```bash
 # File: ips.txt
 8.8.8.8
 192.168.1.1
