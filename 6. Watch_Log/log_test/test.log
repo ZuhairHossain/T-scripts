@@ -1,0 +1,16 @@
+hola amigos
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+Error
+Alert: Something went wrong!
+Alert: Another error occurred.
+ALERT
+End of file.
+Alert: Critical failure detected!
+Alert: System overload!
+Goodbye!
+# --- IGNORE ---
+# This is a sample log file for testing the watch_log_alert.sh script.
+# It contains various log entries, some of which include the keyword "ERROR"
+# to trigger alerts.
