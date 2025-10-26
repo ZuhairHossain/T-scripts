@@ -1,1 +1,0 @@
-### This is a repository where I stored some basic DevOps scripts that needs in daily life usage
